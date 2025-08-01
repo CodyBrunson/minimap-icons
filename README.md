@@ -39,14 +39,14 @@ To build the plugin for production:
 yarn build
 ```
 
-The built plugin will be available in the `dist/` directory as `ExamplePlugin.js`.
+The built plugin will be available in the `dist/` directory as `MinimapIcons.js`.
 
 ## Project Structure
 
 ```
 Example-Plugin/
 ├── src/
-│   ├── ExamplePlugin.ts    # Main plugin class
+│   ├── MinimapIcons.ts    # Main plugin class
 │   └── types.d.ts          # TypeScript type declarations for static resources
 ├── resources/
 │   ├── css/
@@ -70,8 +70,8 @@ Example-Plugin/
 The main plugin class extends the base `Plugin` class from `@highlite/plugin-api`:
 
 ```typescript
-class ExamplePlugin extends Plugin {
-    pluginName = "ExamplePlugin";
+class MinimapIcons extends Plugin {
+    pluginName = "MinimapIcons";
     author: string = "Your Name";  // Update this with your name
     
     // Plugin lifecycle methods
@@ -157,7 +157,7 @@ The `types.d.ts` file provides TypeScript support for importing static resources
 
 To customize this template for your own plugin:
 
-1. **Rename your plugin**: Update the `pluginName` and `author` properties in `src/ExamplePlugin.ts`
+1. **Rename your plugin**: Update the `pluginName` and `author` properties in `src/MinimapIcons.ts`
 2. **Update package.json**: 
    - Change the `name` field to match your plugin name (e.g., `"YourPluginName"`)
    - Update the `main` field if you rename the main TypeScript file (e.g., `"src/YourPluginName.ts"`)
@@ -190,7 +190,7 @@ Testing your plugin locally is essential before publishing to the Plugin Hub. Hi
 3. **Copy the built plugin**:
    Copy your built plugin file to the HighLite plugins directory:
    ```bash
-   cp dist/ExamplePlugin.js /path/to/HighLiteDesktop/src/renderer/client/plugins/
+   cp dist/MinimapIcons.js /path/to/HighLiteDesktop/src/renderer/client/plugins/
    ```
 
 ### Testing Guidelines
