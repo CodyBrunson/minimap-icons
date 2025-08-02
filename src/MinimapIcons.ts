@@ -364,16 +364,6 @@ class MinimapIcons extends Plugin {
         this.removeCSSStyles();
     }
 
-    ScreenMask_initializeControls(): void {
-        this.log('UI ready, setting up minimap icons');
-        this.setMinimapContainer();
-    }
-
-    SocketManager_handleLoggedOut(): void {
-        this.log('Player logged out, cleaning up minimap icons');
-        this.cleanupAllIcons();
-    }
-
     GameLoop_draw(): void {
         if (!this.settings.enable.value || !this.minimapContainer) return;
 
